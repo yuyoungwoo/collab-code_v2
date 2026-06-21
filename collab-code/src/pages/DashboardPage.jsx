@@ -180,6 +180,12 @@ export default function DashboardPage() {
                   {session.language}
                 </span>
               </div>
+
+              {/* 세션 제목 */}
+              <div style={s.sessionTitle}>
+                {session.title || '제목 없는 세션'}
+              </div>
+
               {/* 삭제 버튼 - 관리자일 때만 표시 */}
               <button
                   style={s.deleteBtn}
@@ -187,6 +193,7 @@ export default function DashboardPage() {
               >
                 ×
               </button>
+
               <div style={s.sessionMeta}>
                 {/* 활성 세션이면 초록 점 + '활성' 표시 */}
                 {session.isActive && <><span style={s.dot} />활성</>}
